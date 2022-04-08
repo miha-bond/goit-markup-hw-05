@@ -167,15 +167,16 @@ fill: currentColor;
 .slogan-button {
   margin-top: 40px;
 
-  color: var(--white);
-  background-color: var(--activ-link-but);
 
   width: 200px;
   height: 50px;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--activ-link-but);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: var(--activ-link-but);
@@ -187,20 +188,19 @@ fill: currentColor;
 }
 
 /*Модальное окно*/
-.backdrop {
-  position: fixed;
+.modal-backdrop {
+  position: absolute;
   left: 0;
   top: 0;
-
   width: 100vw;
   height: 100vh;
-
   background: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(1.3);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: opacity(1.5);
+  z-index: 3;
   }
 
-  .backdrop.is-hidden {
+  .modal-backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: 0;
@@ -211,11 +211,9 @@ fill: currentColor;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-
   width:528px;
   height: 581px;
-
-  background: #FFFFFF;
+  background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -223,8 +221,20 @@ fill: currentColor;
   }
 
 .button-modal-clos{
-
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
+
 
 /*Стиль списка текста на странице "Студия".*/
 .title-benefits {
@@ -285,7 +295,12 @@ fill: currentColor;
 .work-list {
   margin-top: 50px;
   display: flex;
+
 }
+.list-work{
+list-style-type: none;
+}
+
 .work-list .list-work + .list-work {
   margin-left: 30px;
   margin-right: 0;
@@ -295,6 +310,34 @@ fill: currentColor;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.label-img-text{
+position: relative;
+}
+
+.img-label{
+margin-right: 0;
+
+}
+.label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.17;
+  text-transform: uppercase;
+
   letter-spacing: 0.03em;
 }
 

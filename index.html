@@ -58,12 +58,16 @@
           для вашего бизнеса
         </h1>
         <button class="slogan-button" type="button" data-modal-open>Заказать услугу</button>
-        <div class="backdrop is-hidden" data-modal>
+        <div class="modal-backdrop is-hidden" data-modal>
           <div class="modal">
             <p class="modal-text">
               ghghghghgh
             </p>
-            <bгtton class="button-modal-clos" type="button" data-modal-close>Закрыть</bгtton>
+            <bгtton class="button-modal-clos" type="button" data-modal-close>
+              <svg class="button-modal-clos-svg" width="11" height="11">
+                <use href="./images/icon/icons.svg#clos-bt"></use>
+              </svg>
+            </bгtton>
           </div>
         </div>
       </section>
@@ -130,28 +134,37 @@
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li class="list-work">
-              <img
-                src="./images/whatarewedoing/imag1.jpg"
-                alt="Набор кода"
-                width="370"
-                height="294"
+            <div class="label-img-text">
+              <img class="img-label"
+              src="./images/whatarewedoing/imag1.jpg"
+              alt="Набор кода"
+              width="370"
+              height="294"
               />
+              <p class="label">Десктопные приложения</p>
+            </div>
             </li>
             <li class="list-work">
-              <img
-                src="./images/whatarewedoing/imag2.jpg"
-                alt="Мобильный телефон"
-                width="370"
-                height="294"
+            <div class="label-img-text">
+              <img class="img-label"
+              src="./images/whatarewedoing/imag2.jpg"
+              alt="Мобильный телефон"
+              width="370"
+              height="294"
               />
+              <p class="label">Мобильные приложения</p>
+            </div>
             </li>
             <li class="list-work">
-              <img
-                src="./images/whatarewedoing/imag3.jpg"
-                alt="Планшет с кубичной палитрой"
-                width="370"
-                height="294"
+            <div class="label-img-text">
+              <img class="img-label"
+              src="./images/whatarewedoing/imag3.jpg"
+              alt="Планшет с кубичной палитрой"
+              width="370"
+              height="294"
               />
+              <p class="label">Дизайнерские решения</p>
+            </div>
             </li>
           </ul>
         </div>
